@@ -1,6 +1,7 @@
-# zeebe-demo
+# zeebe-example
 
-zeebe demo
+The simple example about Zeebe.
+*From https://github.com/berndruecker/flowing-retail*
 
 ```sh
 docker-compose up -d

@@ -4,7 +4,7 @@ import * as path from "path";
 const zbc = new ZBClient();
 
 zbc
-  .deployWorkflow(path.join("..", "bpmn", "order-zeebe.bpmn"))
+  .deployWorkflow(path.join(__dirname, "..", "bpmn", "order-zeebe.bpmn"))
   .then(console.log);
 
 zbc.createWorker({

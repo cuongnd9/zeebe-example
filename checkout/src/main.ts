@@ -8,7 +8,7 @@ const zbc = new ZBClient();
 
 const port = 3000;
 
-app.use("/", express.static(path.join("..", "static")));
+app.use("/", express.static(path.join(__dirname, "static")));
 
 app.put("/api/cart/order", async (req, res) => {
   const { customerId } = req.params;

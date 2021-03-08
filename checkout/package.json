@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",
-    "start": "tsc && node dist/main.js"
+    "start": "tsc && cp -r ./src/static ./dist && node dist/main.js"
   },
   "keywords": [],
   "author": "",
