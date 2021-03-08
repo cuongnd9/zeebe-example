@@ -31,9 +31,11 @@ app.put("/api/cart/order", async (req, res) => {
     customer
   };
 
+  const id = uuid.v4();
   const traceId = uuid.v4();
 
   const payload = {
+    id,
     traceId,
     order
   };

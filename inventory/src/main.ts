@@ -9,3 +9,11 @@ zbc.createWorker({
     complete.success();
   }
 });
+
+zbc.createWorker({
+  taskType: "ship-goods-z",
+  taskHandler: (job, complete) => {
+    console.log("Ship goods");
+    complete.success();
+  }
+});
