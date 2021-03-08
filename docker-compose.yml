@@ -33,3 +33,45 @@ services:
       - zeebe
     networks:
       - zeebe_network
+  checkout-service:
+    container_name: checkout-service
+    image: node:12
+    working_dir: /app
+    ports:
+      - 3000:3000
+    volumes:
+      - ./checkout:/app
+      - ./checkout/node_modules:/app/node_modules
+    networks:
+      - zeebe_network
+    command: npm run start:dev
+  order-service:
+    container_name: order-service
+    image: node:12
+    working_dir: /app
+    volumes:
+      - ./order:/app
+      - ./order/node_modules:/app/node_modules
+    networks:
+      - zeebe_network
+    command: npm run start:dev
+  payment-service:
+    container_name: payment-service
+    image: node:12
+    working_dir: /app
+    volumes:
+      - ./payment:/app
+      - ./payment/node_modules:/app/node_modules
+    networks:
+      - zeebe_network
+    command: npm run start:dev
+  inventory-service:
+    container_name: inventory-service
+    image: node:12
+    working_dir: /app
+    volumes:
+      - ./inventory:/app
+      - ./inventory/node_modules:/app/node_modules
+    networks:
+      - zeebe_network
+    command: npm run start:dev

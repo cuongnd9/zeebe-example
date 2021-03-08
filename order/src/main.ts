@@ -1,7 +1,7 @@
 import { ZBClient } from "zeebe-node";
 import * as path from "path";
 
-const zbc = new ZBClient();
+const zbc = new ZBClient('zeebe:26500');
 
 zbc
   .deployWorkflow(path.join(__dirname, "..", "bpmn", "order-zeebe.bpmn"))

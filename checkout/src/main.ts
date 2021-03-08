@@ -4,7 +4,7 @@ import * as uuid from "uuid";
 import { ZBClient } from "zeebe-node";
 const app = express();
 
-const zbc = new ZBClient();
+const zbc = new ZBClient('zeebe:26500');
 
 const port = 3000;
 
